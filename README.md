@@ -1,29 +1,52 @@
 # Ski Resort Review Sentiment Analysis
 
 ## Overview
-This project analyzes ski resort reviews to classify customer sentiment and better understand factors that drive positive and negative experiences.
+This project uses natural language processing and machine learning to analyze ski resort reviews and classify customer sentiment. The goal is to better understand what drives positive and negative guest experiences and how these insights can support data-driven decision-making.
 
 ## Objective
-The goal is to build a machine learning model that predicts whether a review is positive or negative based on its text, and to extract insights that could help improve customer experience.
+Build a classification model that predicts whether a review is positive or negative based on its text, and identify key factors that influence customer satisfaction.
 
-## Tools Used
+## Dataset
+The dataset consists of ski resort reviews from OnTheSnow.com, including review text and star ratings. Ratings were converted into binary sentiment labels:
+- 0 = Negative (1–3 stars)
+- 1 = Positive (4–5 stars)
+
+## Tools & Technologies
 - Python
 - pandas
 - scikit-learn
-- NLP techniques (tokenization, vectorization)
+- NLP preprocessing (tokenization, stopword removal, lemmatization)
+- TF-IDF vectorization
 - Jupyter Notebook
 
 ## Methodology
-- Cleaned and preprocessed raw text data (removing punctuation, stopwords, etc.)
-- Converted text into numerical features using TF-IDF vectorization
-- Trained classification models (e.g., Logistic Regression)
-- Evaluated model performance using accuracy, precision, and recall
+- Cleaned and preprocessed raw review text
+- Performed exploratory data analysis to understand sentiment distribution
+- Converted text into numerical features using TF-IDF
+- Trained a classification model (Logistic Regression)
+- Evaluated performance using accuracy, precision, recall, and confusion matrix
 
 ## Results
-- Achieved strong classification performance in distinguishing positive vs negative reviews
+- The model achieved strong performance in identifying positive vs negative reviews
+- High recall for positive sentiment, with lower precision on negative sentiment (class imbalance impact)
 - Identified key words and phrases associated with customer satisfaction and dissatisfaction
 
-## Key Takeaways
-- Text data can provide meaningful insights into customer experience
-- Simple models combined with proper preprocessing can perform effectively on sentiment classification tasks
-- Results can help ski resorts prioritize improvements based on customer feedback
+## Key Insights
+- Positive reviews are strongly associated with factors like snow quality, terrain, and overall experience
+- Negative reviews often highlight crowding, staff issues, and wait times
+- Imbalanced data can significantly affect model performance, especially for minority classes
+
+## Business Impact
+This type of model can help ski resorts:
+- Prioritize improvements based on customer feedback
+- Detect recurring issues at scale
+- Make more informed investment and operational decisions
+
+## Project Structure
+ski-resort-review-sentiment-analysis/
+│
+├── sentiment_analysis.ipynb
+├── text_preprocessing.ipynb
+├── data/
+│   └── ski_reviews.csv
+├── README.md
