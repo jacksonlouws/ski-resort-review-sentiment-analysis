@@ -34,16 +34,6 @@ For this project, star ratings are converted into binary sentiment labels:
 
 ---
 
-## Project Structure
-
-├── text_preprocessing.ipynb # Data cleaning and preprocessing pipeline
-├── text_classification.ipynb # Model training, evaluation, and prediction
-├── ski_reviews_binary.csv # Final cleaned dataset
-└── README.md
-
-
----
-
 ## Methodology
 
 ### 1. Text Preprocessing
